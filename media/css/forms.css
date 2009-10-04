@@ -1,0 +1,112 @@
+
+/** This is the root form class **/
+.formable {}
+
+.formable fieldset {border: 1px solid #DFDFDF; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px 10px;padding:0 0 10px 0;}
+
+
+.formable .ctrlHolder,
+.formable .buttonHolder,
+.formable p {padding: 8px; margin: 3px 10px;}
+
+.formable fieldset legend {
+	margin: 5px; 
+	padding: 5px; 
+	border: 1px solid #DFDFDF; 
+	font-weight: bold; 
+	color: #5F5F5F;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px 5px;
+	font-size: 1.3em;
+}
+
+.formable fieldset legend:hover {color: #3F3F3F;}
+
+.formable .ctrlHolder .fieldHint {color: #7F7F7F; margin: 2px 2px 0; padding: 0;}
+.formable em {color:#DF2929; margin:0 4px;font-weight:bolder;}
+
+/** Clearfix **/
+/*
+.formable .ctrlHolder,
+.formable .buttonHolder {overflow: auto;}
+*/
+.formable .ctrlHolder:after,
+.formable .buttonHolder:after  {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+
+* html .formable .ctrlHolder {
+	height: 1%;
+}
+
+.formable .ctrlHolder {
+	display: block;
+}
+
+.formable .ctrlHolder label {font-size: 1.1em; font-weight: bold;}
+
+/** Form input styles **/
+.formable .ctrlHolder input[type="text"],
+.formable .ctrlHolder input[type="password"],
+.formable .ctrlHolder .textInput {font-size: 1.2em; border: 2px solid #DFDFDF; padding: 3px;}
+
+.formable .ctrlHolder input[type="text"]:focus,
+.formable .ctrlHolder input[type="password"]:focus,
+.formable .ctrlHolder .textInput:focus {border: 2px solid #4C70AF; outline: none;}
+
+.formable .ctrlHolder input.inputValid {border: 2px solid #319F40;}
+.formable .ctrlHolder input.inputInvalid,
+.formable .errorField input[type="text"],
+.formable .errorField input.textInput {border: 2px solid #CF3333;}
+
+/** Form styles **/
+.formable .inlineLabels .ctrlHolder label,
+.formable  .ctrlHolder label  {display: block; float: left; width: 42%;}
+
+.formable .inlineLabels .ctrlHolder input[type="text"],
+.formable .inlineLabels .ctrlHolder input[type="password"],
+.formable .inlineLabels .ctrlHolder .textInput,
+.formable .ctrlHolder input[type="text"],
+.formable .ctrlHolder input[type="password"],
+.formable .ctrlHolder .textInput {width: 55%;}
+
+.formable .blockLabels .ctrlHolder label {display: block; width: 100%;}
+.formable .blockLabels .ctrlHolder input[type="text"],
+.formable .blockLabels .ctrlHolder input[type="password"],
+.formable .blockLabels .ctrlHolder .textInput {width: 98%;}
+
+/** Form errors **/
+.formable .errorField {background-color: #FFAFB2; padding:8px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;}
+.formable .errorMessage {background-color: #EF686D; padding: 5px 10px; font-weight: bold; color: #FFFFFF; margin: 0;-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;}
+.formable .ctrlHolder .errorMessage {margin: 0 0 8px 0;}
+/** Form widgets **/
+
+.formable .ctrlWidget-Name label {display: block; width: 100%;}
+.formable .ctrlWidget-Name #first-name,
+.formable .ctrlWidget-Name #last-name {width: 47%; float: left;margin: 0 2.3% 0 0;}
+.formable .ctrlWidget-Name #last-name {margin: 0;}
+
+.formable .ctrlWidget-PasswordConfirm #password,
+.formable .ctrlWidget-PasswordConfirm #password-confirm {width: 47%; float: left;margin-right:2.3%;}
+.formable .ctrlWidget-PasswordConfirm #password-confirm {margin-right: 0;}
+
+.formable .ctrlWidget-YesNo label,
+.formable .blockLabels .ctrlWidget-YesNo label {float:left; display: block; width: 51%;}
+
+.formable .ctrlWidget-YesNo div {width:49%; float:right;}
+
+.formable .ctrlWidget-YesNo span,
+.formable .inlineLabels .ctrlWidget-YesNo span {/*display: block;*/margin-right: 10px;}
+
+.formable .ctrlWidget-YesNo span label,
+.formable .inlineLabels .ctrlWidget-YesNo span label,
+.formable .blockLabels .ctrlWidget-YesNo span label{float: none; display: inline; width: auto;}
